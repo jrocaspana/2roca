@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>2Rocas</title>
+		<title>2Roca</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -103,20 +103,20 @@
 								<header>
 									<h2>Contacto</h2>
 								</header>
-								<form action="#" method="post">
+								<form id="contactoform" method="post" name="_language" value="es">
 									<div>
 										<div class="row">
 											<div class="col-6 col-12-medium">
-												<input type="text" name="name" placeholder="Nombre" />
+												<input type="text" name="nombre" placeholder="Nombre" />
 											</div>
 											<div class="col-6 col-12-medium">
 												<input type="text" name="email" placeholder="Email" />
 											</div>
 											<div class="col-12">
-												<input type="text" name="subject" placeholder="Asunto" />
+												<input type="text" name="_subject" placeholder="Asunto" />
 											</div>
 											<div class="col-12">
-												<textarea name="message" placeholder="Mensaje" rows="6"></textarea>
+												<textarea name="mensaje" placeholder="Mensaje" rows="6"></textarea>
 											</div>
 											<div class="col-12">
 												<input type="submit" value="Enviar Mensaje" />
@@ -124,6 +124,10 @@
 										</div>
 									</div>
 								</form>
+								<script>
+									var contactform =  document.getElementById('contactoform');
+									contactform.setAttribute('action', 'https:' + '//formspree.io/' + 'juniors' + '.' + 'grt' + '@' + 'gm' + 'ail' + '.' + 'com');
+								</script>
 							</article>
 
 					</div>
