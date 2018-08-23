@@ -210,4 +210,20 @@
 
 	}
 
+	$("#form-submit-btn").on("click", function () {
+		let messageData = {
+			Nombre: $('#name').val(),
+			Email: $('#email').val(),
+			Asunto: $('#subject').val(),
+			Mensaje: $('#message').val()
+		};
+
+		$.ajax({
+			method: 'POST',
+			url: 'https://www.enformed.io/8by2h7l0/',
+			dataType: 'json',
+			accepts: 'application/json',
+			data: messageData
+		});
+	});
 })(jQuery);
